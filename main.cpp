@@ -3,6 +3,12 @@
 using namespace std;
 
 int main() {
+
+     if (!login()) {
+        cout << "Login failed. Exiting program.\n";
+        return 1; // Exit with an error code
+    }
+
     HotelManagement hotel;
     int opt;
     string pname;

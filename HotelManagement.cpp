@@ -1,14 +1,17 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <fstream>
+#include "Login.cpp"
 #include "Room.cpp"
+
 using namespace std;
 
 class HotelManagement {
 private:
     vector<Room> rooms;
 
-public:
+public:    
     void manageRooms() {
         int opt, rno;
 
