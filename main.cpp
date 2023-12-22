@@ -23,7 +23,8 @@ int main() {
     cout << "\n4. Search Customer";
     cout << "\n5. Check-Out Room";
     cout << "\n6. Guest Summary Report";
-    cout << "\n7. Exit";
+    cout << "\n7. Save to File";
+    cout << "\n8. Exit";
     cout << "\n----------------------------------------";
     cout << "\nEnter Option: ";
         cin >> opt;
@@ -53,6 +54,9 @@ int main() {
                 hotel.guestSummaryReport();
                 break;
             case 7:
+                hotel.saveToFile();
+                break;
+            case 8:
                 cout << "\nTHANK YOU!";
                 break;
             default:

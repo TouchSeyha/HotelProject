@@ -66,6 +66,9 @@ public:
                 cout << "\nEnter Customer Name: ";
                 cin >> rooms[i].customer.name;
 
+                cout << "\nEnter Customer Age: ";
+                cin >> rooms[i].customer.age;
+
                 cout << "\nEnter Address: ";
                 cin >> rooms[i].customer.address;
 
@@ -168,4 +171,33 @@ public:
             }
         }
     }
+
+    void saveToFile(){
+        string filename;
+        cout << "Enter File name to save: ";
+        cin >> filename;
+
+        ofstream file(filename);
+        if (!file)
+    {
+        cout << "Error opening file!" << endl;
+        return;
+    }
+     for (const auto &rooms : rooms)
+    {
+        file << rooms.customer.booking_id << ","
+             << rooms.customer.name << ","
+             
+             << rooms.customer.age << ","
+             << rooms.customer.address << ","
+             << rooms.customer.phone << ","
+             << rooms.customer.from_date << ","
+             << rooms.customer.to_date << ","
+             << rooms.customer.payment_advance << endl;
+    }
+
+    file.close();
+    cout << "File saved successfully!" << endl;
+    }
+
 };
