@@ -10,7 +10,7 @@ int main() {
     }
 
     HotelManagement hotel;
-    int opt;
+    int opt; 
     string pname;
 
     do {
@@ -24,7 +24,8 @@ int main() {
     cout << "\n5. Check-Out Room";
     cout << "\n6. Guest Summary Report";
     cout << "\n7. Save to File";
-    cout << "\n8. Exit";
+    cout << "\n8. Upload File to System";
+    cout << "\n9. Exit";
     cout << "\n----------------------------------------";
     cout << "\nEnter Option: ";
         cin >> opt;
@@ -51,19 +52,22 @@ int main() {
                 hotel.checkOut(rno);
                 break;
             case 6:
-                hotel.guestSummaryReport();
+                hotel.displayGuestreport();
                 break;
             case 7:
                 hotel.saveToFile();
                 break;
             case 8:
+                hotel.uploadFile();
+                break;
+            case 9:
                 cout << "\nTHANK YOU!";
                 break;
             default:
                 cout << "\nInvalid Option. Please try again.\n";
                 break;
         }
-    } while (opt != 7);
+    } while (opt != 9);
 
     return 0;
 }
